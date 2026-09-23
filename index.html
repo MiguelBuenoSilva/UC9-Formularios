@@ -1,57 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pesquisa</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>Pesquisa De Usuário</h1>
 
     <form action="" method="get">
+      <fieldset>
+        <legend>Dados pessoais:</legend>
+        <label for="nomeUsuarioId">Nome do usuário:</label>
+        <input type="text" name="nomeUsuario" id="nomeUsuarioId" required />
+        <br />
+        <label for="idadeUsuarioId"> Idade do usuário: </label>
+        <input
+          type="number"
+          name="idadeUsuario"
+          id="idadeUsuarioId"
+          min="12"
+          max="100"
+          required
+        />
+        <br />
+        <label for="dtNascimentoId"> Data de Nascimento: </label>
+        <input type="date" name="dtNascimento" id="dtNascimentoId" />
+        <br />
+        <label for="emailUsuarioId">E-mail:</label>
+        <input type="email" name="emailUsuario" id="emailUsuarioId" required />
+        <br />
+        <label for="telefoneUsuarioId">Telefone:</label>
+        <input type="tel" name="telefoneUsuario" id="telefoneUsuarioId" />
+        <br />
+        <label for="fotoUsuarioId">Foto do cliente:</label>
+        <input
+          type="file"
+          name="fotoUsuario"
+          id="fotoUsuarioId"
+          accept="image/*"
+        />
+      </fieldset>
 
-        <fieldset>
-            <label for="nomeUsuarioId">Nome do usuário:</label>
-            <input 
-            type="text" 
-            name="nomeUsuario"
-             id="nomeUsuarioId" required>
-            <br>
-            <label for="idadeUsuarioId">
-                Idade do usuário:
-            </label>
-            <input 
-            type="number" 
-            name="idadeUsuario" 
-            id="idadeUsuarioId" 
-            min="12" max="100" required>
-            <br>
-            <label for="dtNascimentoId">
-                Data de Nascimento:
-            </label>
-            <input type="date" name="dtNascimento" id="dtNascimentoId">
-            <br>
-            <label for="emailUsuarioId">E-mail:</label>
-            <input type="email" name="emailUsuario" id="emailUsuarioId" required>
-            <br>
-            <label for="telefoneUsuarioId">Telefone:</label>
-            <input type="tel" name="telefoneUsuario" id="telefoneUsuarioId">
-            <br>
-            <label for="fotoUsuarioId">Foto do cliente:</label>
-            <input type="file" name="fotoUsuario" id="fotoUsuarioId" accept="image/*">
+      <fieldset>
+        <legend>Perfil:</legend>
+        <p>Escolha o seu genêro</p>
+        <input
+          type="radio"
+          name="radioPerfil"
+          id="radioPerfilFeminino"
+          value="feminino"
+        />
+        <label for="radioPerfilFeminino">Feminino</label>
 
-        </fieldset>
+        <input
+          type="radio"
+          name="radioPerfil"
+          id="radioPerfilMasculino"
+          value="masculino"
+        />
+        <label for="radioPerfilMasculino">Masculino</label>
 
+        <input
+          type="radio"
+          name="radioPerfil"
+          id="radioPerfilNaoInformado"
+          value="naoinformado"
+        />
+        <label for="radioPerfilNaoInformado">Não Informar</label>
+        <br />
 
+        <label for="estadoCivilId">Estado civíl:</label>
 
-        <button type="submit"> Enviar dados</button>
-        <button type="reset">Limpar</button>
+        <select name="estadoCivil" id="estadoCivilId">
+          <option value="casado">Casado(a)</option>
+          <option value="solteiro">Solteiro(a)</option>
+          <option value="viuvo">Viúvo(a)</option>
+          <option value="divorciado">Divorciado(a)</option>
+          <option value="estavel">União Estável</option>
+        </select>
 
+        <label for="estadosId">Estado:</label>
+
+        <select name="estados" id="estadosId">
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espirito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+        <br>
+        <label for="usuarioCidadeId">Cidade:</label>
+        <input type="text" name="usuarioCidade" id="usuarioCidadeId">
+
+      </fieldset>
+
+      <button type="submit">Enviar dados</button>
+      <button type="reset">Limpar</button>
     </form>
-
-</body>
-
+  </body>
 </html>
