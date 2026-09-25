@@ -1,29 +1,28 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pesquisa</title>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesquisa</title>
+  <link rel="stylesheet" href="./css/base.css">
+</head>
+
+<body>
+
+  <div class="principal">
+
     <h1>Pesquisa De Usuário</h1>
 
     <form action="" method="get">
       <fieldset>
+
         <legend>Dados pessoais:</legend>
         <label for="nomeUsuarioId">Nome do usuário:</label>
         <input type="text" name="nomeUsuario" id="nomeUsuarioId" required />
         <br />
         <label for="idadeUsuarioId"> Idade do usuário: </label>
-        <input
-          type="number"
-          name="idadeUsuario"
-          id="idadeUsuarioId"
-          min="12"
-          max="100"
-          required
-        />
+        <input type="number" name="idadeUsuario" id="idadeUsuarioId" min="12" max="100" required />
         <br />
         <label for="dtNascimentoId"> Data de Nascimento: </label>
         <input type="date" name="dtNascimento" id="dtNascimentoId" />
@@ -35,40 +34,24 @@
         <input type="tel" name="telefoneUsuario" id="telefoneUsuarioId" />
         <br />
         <label for="fotoUsuarioId">Foto do cliente:</label>
-        <input
-          type="file"
-          name="fotoUsuario"
-          id="fotoUsuarioId"
-          accept="image/*"
-        />
+        <input type="file" name="fotoUsuario" id="fotoUsuarioId" accept="image/*" />
+
       </fieldset>
 
       <fieldset>
+
         <legend>Perfil:</legend>
+
         <p>Escolha o seu genêro</p>
-        <input
-          type="radio"
-          name="radioPerfil"
-          id="radioPerfilFeminino"
-          value="feminino"
-        />
+
+        <input type="radio" name="radioPerfil" id="radioPerfilFeminino" value="feminino" />
         <label for="radioPerfilFeminino">Feminino</label>
 
-        <input
-          type="radio"
-          name="radioPerfil"
-          id="radioPerfilMasculino"
-          value="masculino"
-        />
+        <input type="radio" name="radioPerfil" id="radioPerfilMasculino" value="masculino" />
         <label for="radioPerfilMasculino">Masculino</label>
 
-        <input
-          type="radio"
-          name="radioPerfil"
-          id="radioPerfilNaoInformado"
-          value="naoinformado"
-        />
-        <label for="radioPerfilNaoInformado">Não Informar</label>
+        <input type="radio" name="radioPerfil" id="radioPerfilNaoInformado" value="naoinformado" />
+        <label for="radioPerfilNaoInformado">Prefiro Não Informar</label>
         <br />
 
         <label for="estadoCivilId">Estado civíl:</label>
@@ -111,16 +94,22 @@
           <option value="SP">São Paulo</option>
           <option value="SE">Sergipe</option>
           <option value="TO">Tocantins</option>
+
         </select>
         <br>
+
         <label for="usuarioCidadeId">Cidade:</label>
+
         <input type="text" name="usuarioCidade" id="usuarioCidadeId">
 
       </fieldset>
 
       <fieldset>
+       
         <legend>Hábitos:</legend>
+
         <p>Marque as suas rede sociais</p>
+         <div class="redes-socias">
         <input type="checkbox" name="redesSociais" id="instagramId" value="instagram">
         <label for="instagramId">Instagram</label>
 
@@ -135,10 +124,12 @@
 
         <input type="checkbox" name="redesSociais" id="youtubeId" value="youtube">
         <label for="youtubeId">YouTube</label>
-         <br>
-         <label for="estiloMusicalId">Estilo Musical:</label>
-         <input type="text" name="estiloMusical" id="estiloMusicalId" list="estilosMusicais">
-         <datalist id="estilosMusicais">
+        </div>
+        <br>
+        <label for="estiloMusicalId">Estilo Musical:</label>
+        <input type="text" name="estiloMusical" id="estiloMusicalId" list="estilosMusicais">
+
+        <datalist id="estilosMusicais">
           <option value="Rock">
           <option value="Pop">
           <option value="Eletronica">
@@ -148,17 +139,21 @@
           <option value="Pagode">
           <option value="Samba">
           <option value="MPB">
-         </datalist>
-         <br>
-         <label for="corFavoritaId"> Cor Favorita?</label>
-         <input type="color" name="corFavorita" id="corFavoritaId">
+        </datalist>
+        <br>
+        
+        <label for="corFavoritaId"> Cor Favorita?</label>
+        <input type="color" name="corFavorita" id="corFavoritaId">
 
-      
+
       </fieldset>
 
       <button type="submit">Enviar dados</button>
       <button type="reset">Limpar</button>
 
     </form>
-  </body>
+  </div>
+
+</body>
+
 </html>
